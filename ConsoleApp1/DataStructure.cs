@@ -87,9 +87,10 @@ namespace ConsoleApp1
         public string[] GetAllStringStartingWithLetter(char value)
         {
             List<string> strL = new List<string>();
+            char valueLower = char.ToLower(value);
 
-            for(int i = 0; i < stringCount; i++){
-                if(char.ToLower(strings[i][0]) == char.ToLower(value)){
+            for (int i = 0; i < stringCount; i++){
+                if(char.ToLower(strings[i][0]) == valueLower){
                     strL.Add(strings[i]);
                 }
             }
